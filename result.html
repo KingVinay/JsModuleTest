@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="result.css">
+</head>
+<body>
+  <body>
+		<div class="container">
+			<div class="WinnerSection">
+				<div class="stars">
+					<img src="Images/starsicon.png" alt="StarsIcon">
+				</div>
+				<div class="trophy">
+					<img src="Images/trophyicon.png" alt="TrophyIcon">
+				</div>
+			</div>
+			<div class="HurrayMessage">
+				<h1>Hurray !!</h1>
+				<h2>You won the game</h2>
+			</div>
+			<div class="playAgainButton">
+				<a href="/"><span>PLAY AGAIN</span></a>
+			</div>
+
+			<div class="ruleBook">
+				<div class="closeButton">
+					<span>X</span>
+				</div>
+				<h1>Rules</h1>
+				<div class="rules">
+					<ul>
+						<li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+						<li>
+							Agree ahead of time whether you'll count off “rock, paper, scissors,
+							shoot” or just “rock, paper, scissors.”
+						</li>
+						<li>
+							Use rock, paper, scissors to settle minor decisions or simply play to
+							pass the time
+						</li>
+						<li>
+							If both players lay down the same hand, each player lays down another
+							hand
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="actionButtons">
+				<div class="rulesButton">
+					<span>rules</span>
+				</div>
+			</div>
+		</div>
+
+  <script>
+    const ruleBook = document.querySelector('.ruleBook');
+    const rulesButton = document.querySelector('.rulesButton');
+    const closeButton = document.querySelector('.closeButton');
+    function handleRuleMenuClick() {
+      ruleBook.classList.toggle('open');
+    }
+
+    rulesButton.addEventListener('click', handleRuleMenuClick);
+    closeButton.addEventListener('click', handleRuleMenuClick);
+  </script>
+</body>
+</html>

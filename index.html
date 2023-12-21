@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock,Paper,Scissor</title>
+  <link rel="icon" type="png" href="Images/rpsicon.jpeg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="board">
+      <div class="game">
+        <h1>ROCK</h1><br>
+        <h1>PAPER</h1><br>
+        <h1>SCISSORS</h1>
+      </div>
+      <div class="score">
+        <div class="computer">
+          <p>COMPUTER<br>SCORE</p>
+          <span id="computerscore">0</span>
+        </div>
+        <div class="player">
+          <p>YOUR<br>SCORE</p>
+          <span id="playerscore">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Footer">
+    <div class="choices">
+      <div class="circle rock" onclick="playGame('rock')" style="pointer-events: auto;">
+        <div class="bigcircle">
+          <div class="smallcircle">
+            <div class="image">
+              <img src="Images/rockicon.png" alt="RockIcon">
+            </div>
+          </div>
+        </div>
+
+        <div class="shades">
+          <div class="shade shade1"></div>
+          <div class="shade shade2"></div>
+          <div class="shade shade3"></div>
+        </div>
+      </div>
+
+      <div class="circle scissor" onclick="playGame('scissor')" style="pointer-events: auto;">
+        <div class="bigcircle">
+          <div class="smallcircle">
+            <div class="image">
+              <img src="Images/scissoricon.png" alt="ScissorIcon">
+            </div>
+          </div>
+        </div>
+        
+        <div class="shades">
+          <div class="shade shade1"></div>
+          <div class="shade shade2"></div>
+          <div class="shade shade3"></div>
+        </div>
+      </div>
+
+      <div class="circle paper" onclick="playGame('paper')" style="pointer-events: auto;">
+        <div class="bigcircle">
+          <div class="smallcircle">
+            <div class="image">
+              <img src="Images/papericon.png" alt="PaperIcon">
+            </div>
+          </div>
+        </div>
+
+        <div class="shades">
+          <div class="shade shade1"></div>
+          <div class="shade shade2"></div>
+          <div class="shade shade3"></div>
+        </div>
+      </div>
+
+      <div class="connect connect1" style=""></div>
+      <div class="connect connect2" style=""></div>
+      <div class="connect connect3" style=""></div>
+
+      <div>
+        <h3 id="playertag"></h3>
+      </div>
+      <div>
+        <h3 id="computertag"></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="ruleBook">
+    <div class="closeButton">
+      <span>X</span>
+    </div>
+    <h1>Game Rules</h1>
+    <div class="rules">
+      <ul>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>
+          Agree ahead of time whether you'll count off “rock, paper, scissors, shoot”
+          or just “rock, paper, scissors.”
+        </li>
+        <li>
+          Use rock, paper, scissors to settle minor decisions or simply play to pass
+          the time.
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another hand.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="actionButtons">
+    <div class="rulesButton">
+      <span>RULES</span>
+    </div>
+
+    <div class="nextButton">
+      <a href="result.html"><span>NEXT</span></a>
+    </div>
+  </div>
+
+  <section class="result" style="display: none;">
+    <h1 id="result1"></h1>
+    <h2 id="result2"></h2>
+    <span onclick="resetGame()">PLAY AGAIN</span>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

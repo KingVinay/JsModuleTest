@@ -1,0 +1,149 @@
+:root{
+  --bgarea:#8CC461;
+  --blue:#0074B6;
+  --purple:#BD00FF;
+  --orange:#FFA943;
+  --darkgreen:#004429;
+  --red:#FF0000;
+  --grey:#000000A3;
+  --yellow:#FFD600;
+}
+
+*{
+  margin:0;
+  padding:0;
+  font-family: Arial;
+}
+
+body{
+  background-color: var(--bgarea);
+  color:#FFFFFF;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.WinnerSection {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+	height: auto;
+	text-align: center;
+}
+
+.trophy {
+	position: absolute;
+	top: 70%;
+	transform: translateY(-50%);
+}
+
+.HurrayMessage {
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.HurrayMessage h1 {
+	font-size: 7rem;
+}
+.HurrayMessage h2 {
+	font-size: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+	.HurrayMessage h1 {
+		font-size: 3rem;
+	}
+	.HurrayMessage h2 {
+		font-size: 2rem;
+	}
+}
+
+.playAgainButton {
+	color: #6b6b6b;
+	padding: 0.5rem 1rem;
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.playAgainButton a {
+	color: #6b6b6b;
+}
+
+.ruleBook {
+	transform: scaleY(0);
+	transform-origin: bottom;
+	position: absolute;
+	visibility: hidden;
+	bottom: 5rem;
+	right: 3rem;
+	width: 18rem;
+  height: 20rem;
+  line-height: 1.4rem;
+	padding: 0.5rem 1rem;
+	border: 0.5rem solid white;
+	border-radius: 14px;
+  background-color: var(--darkgreen);
+	z-index: 1000;
+	box-sizing: border-box;
+}
+.open {
+	transform: scaleY(1);
+	visibility: visible;
+}
+
+.ruleBook h1 {
+	text-align: center;
+}
+.ruleBook .closeButton {
+	position: absolute;
+	top: -1.8rem;
+	right: -1.8rem;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+	border-radius: 50%;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.ruleBook .rules {
+	font-size: 0.8rem;
+}
+
+.ruleBook .rules li {
+	padding-left: 1rem;
+	font-size: 0.8rem;
+}
+
+.ruleBook .rules li::marker {
+	content: '\25A0';
+	font-size: 1rem;
+	color: var(--primary-yellow-color);
+}
+
+.actionButtons {
+	position: fixed;
+	bottom: 2rem;
+	right: 3rem;
+	text-transform: uppercase;
+}
+
+.rulesButton {
+	border: 3px solid white;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 0.2rem 1rem 0.2rem 1rem;
+}
